@@ -1,7 +1,7 @@
 const quizData = [
     {
         id: 1,
-        question: "Is this sentence an <em class='bold'>exclamation</em> or a <em class='bold'>question</em>? 'How disappointing it was that it rained on sports day'",
+        question: "Is this sentence an exclamation or a question? 'How disappointing it was that it rained on sports day.'",
         options: ["Exclamation", "Question"],
         correct: 0,
         questionRef: "paper1-2023-2a",
@@ -18,3 +18,16 @@ const quizData = [
 const answerElement = document.querySelectorAll('.answer');
 const [questionElement, option_1, option_2, option_3, option_4] = document.querySelectorAll('#question,  .option_1, .option_2, .option_3, .option_4'); 
 const submitBtn = document.querySelector('#submit');
+
+const currentQuiz = 0; 
+const score = 0; 
+
+const loadQuiz = () => {
+const {question, options } = quizData[currentQuiz];
+console.log(options)
+questionElement.innerText = question;
+// options.forEach((curOption, index) => (option_1.innerText = curOption)); 
+options.forEach((curOption, index) => window[`option_${index+1}`].innerText = curOption) 
+}
+
+loadQuiz();
