@@ -26,7 +26,6 @@ const loadQuiz = () => {
 const {question, options } = quizData[currentQuiz];
 console.log(options)
 questionElement.innerText = question;
-// options.forEach((curOption, index) => (option_1.innerText = curOption)); 
 options.forEach((curOption, index) => window[`option_${index+1}`].innerText = curOption) 
 }
 
