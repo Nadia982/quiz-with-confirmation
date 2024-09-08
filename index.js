@@ -36,6 +36,12 @@ const quizData = [
     correct: 0,
     questionRef: "english",
   },
+  {
+    id: 7,
+    options: ["cautiously", "catiously"],
+    correct: 0,
+    questionRef: "english",
+  },
 ];
 
 const questionNumber = document.querySelector(".question-number"); // the container where the question no is shown (at top)
@@ -100,7 +106,8 @@ function getNewQuestion() {
 
       const randomIndex = Math.floor(Math.random() * availableQuestions.length);
     let options = availableQuestions[randomIndex].options;
- 
+    options = options.sort((a, b) => 0.5 - Math.random());
+
     const questionIndex =
       availableQuestions[randomIndex]; ////gets random question
     currentQuestion = questionIndex; // Assigns a random question to the currentQuestion variable.
