@@ -45,6 +45,8 @@ let questionCounter = 0; // shows which question we are on at the top
 let currentQuestion; // stores a random question from the available questions
 let correctAnswers = 0; // notes how many correct answers the user has made
 let questionsAskedList = []; //stores a list of questions that have been asked
+let radioButtonA = document.querySelector("#a");
+let radioButtonB = document.querySelector("#b");
 
 function resetQuiz() {
   questionCounter = 0;
@@ -83,6 +85,9 @@ function showQuestionNumber() {
 }
 
 function getNewQuestion() {
+  radioButtonA.checked = false;
+  radioButtonB.checked = false;
+
   if (questionCounter >= questionLimit) {
     // showResult();
     resetQuiz();
@@ -93,21 +98,13 @@ function getNewQuestion() {
     }
   // EXPLANATION - setAvailableQuestions() pushes all available questions to the availableQuestions array.
 
-    // let options = quizData[Math.floor(Math.random() * availableQuestions.length)].options;
-    console.log("*********************************************");
-    console.log("availableQuestions length is ");
-    console.log(availableQuestions);
-    const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+      const randomIndex = Math.floor(Math.random() * availableQuestions.length);
     let options = availableQuestions[randomIndex].options;
-    console.log("options are ");
-    console.log(options);
-
-    // options = options.sort((a, b) => 0.5 - Math.random());
-
+ 
     const questionIndex =
       availableQuestions[randomIndex]; ////gets random question
     currentQuestion = questionIndex; // Assigns a random question to the currentQuestion variable.
-    // console.log(currentQuestion);
+
     questionsAskedList.push(currentQuestion); // Pushes the randomly selected question to the questionsAskedList array.
     const index1 = availableQuestions.indexOf(questionIndex); // gets the posn of "QuestionIndex" in "AvailableQuestions" array
     availableQuestions.splice(index1, 1); // removes questionIndex from the ‘AvailableQuestions’ array
@@ -117,7 +114,6 @@ function getNewQuestion() {
         (window[`option_${index + 1}`].innerText = currentOption)
     );
     questionCounter++; // increases the questionCounter variable by 1.
-    // console.log(questionCounter);
   }
 }
 
