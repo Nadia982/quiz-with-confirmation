@@ -42,6 +42,12 @@ const quizData = [
     correct: 0,
     questionRef: "english",
   },
+  {
+    id: 8,
+    options: ["usually", "usally"],
+    correct: 0,
+    questionRef: "art",
+  },
 ];
 
 const questionNumber = document.querySelector(".question-number"); // the container where the question no is shown (at top)
