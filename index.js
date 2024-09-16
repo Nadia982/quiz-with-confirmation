@@ -90,6 +90,12 @@ const quizData = [
     correct: 0,
     questionRef: "english",
   },
+  {
+    id: 16,
+    options: ["physical", "phisical"],
+    correct: 0,
+    questionRef: "geography",
+  },
 ];
 
 const questionNumber = document.querySelector(".question-number"); // the container where the question no is shown (at top)
