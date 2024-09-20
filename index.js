@@ -108,6 +108,43 @@ const quizData = [
     correct: 0,
     questionRef: "english",
   },
+  {
+    id: 19,
+    options: ["element", "eliment"],
+    correct: 0,
+    questionRef: "music",
+  },
+  {
+    id: 20,
+    options: ["volumes", "volums"],
+    correct: 0,
+    questionRef: "music",
+  },
+  {
+    id: 21,
+    options: ["instruments", "instrements"],
+    correct: 0,
+    questionRef: "music",
+  },
+  {
+    id: 22,
+    options: ["exploring", "explouring"],
+    correct: 0,
+    questionRef: "music",
+  },
+  {
+    id: 23,
+    options: ["guitar", "gitar"],
+    correct: 0,
+    questionRef: "music",
+  },
+  {
+    id: 24,
+    options: ["Tchaikovsky", "tchaikocesay"],
+    correct: 0,
+    questionRef: "music",
+  },
+  
 ];
 
 const questionNumber = document.querySelector(".question-number"); // the container where the question no is shown (at top)
