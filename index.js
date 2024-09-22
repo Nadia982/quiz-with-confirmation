@@ -156,6 +156,13 @@ const quizData = [
     correct: 0,
     questionRef: "art",
   },
+  {
+    id: 27,
+    options: ["biscuit", "bisqet"],
+    correct: 0,
+    questionRef: "food",
+  },
+
 ];
 
 const questionNumber = document.querySelector(".question-number"); // the container where the question no is shown (at top)
