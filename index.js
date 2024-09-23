@@ -158,7 +158,7 @@ const quizData = [
   },
   {
     id: 27,
-    options: ["biscuit", "bisqet"],
+    options: ["biscuit", "bisquet"],
     correct: 0,
     questionRef: "food",
   },
